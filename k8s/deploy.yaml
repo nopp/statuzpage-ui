@@ -29,7 +29,7 @@ spec:
         volumeMounts:
         - name: config-volume
           mountPath: /etc/statuzpage-ui/config.cfg
-          subPath: config.json
+          subPath: config.cfg
       volumes:
         - name: config-volume
           configMap:
