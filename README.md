@@ -1,13 +1,6 @@
 # StatuZpage UI
 
-
-Requirements:
-=============
-	python3
-	flask
-
-Configurations:
-===============
+## Configurations:
 Default config dir: /etc/statuzpage-ui/config.cfg
 * ip: ip to bind
 * port: 8282(default)
@@ -17,3 +10,14 @@ Default config dir: /etc/statuzpage-ui/config.cfg
 * mysqlDb: statuzpage(default)
 * apiHost = ip/DNS:8000 from StatuZpage API
 * apiToken = the same token configured on StatuZpage API
+
+## Dependencies
+$ pip install -r requirements.txt
+
+## Start
+$ python3 app-ui.py
+
+## Screenshots
+![Ui](https://raw.githubusercontent.com/nopp/statuzpage-ui/master/.img/ui.png)
+
+![Ui Incidents](https://raw.githubusercontent.com/nopp/statuzpage-ui/master/.img/ui-incidents.png)
