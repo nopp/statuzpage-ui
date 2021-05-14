@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: statuzpage-ui
+  namespace: statuzpage
+data:
+  config.cfg: |
+[conf]
+# Frontend conf
+ip = 0.0.0.0
+port = 8282
+# Database conf
+mysqlHost = xmysqlhostx
+mysqlUser = xmysqluserx
+mysqlPass = xmysqlpassx
+mysqlDb = statuzpage
+# API conf
+apiHost = localhost:8000
+apiToken = xapitokenx

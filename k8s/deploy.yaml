@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: statuzpage-ui
+  namespace: statuzpage
+  labels:
+    app: statuzpage-ui
+spec:
+  selector:
+    matchLabels:
+      app: statuzpage-ui
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: statuzpage-ui
+    spec:
+      containers:
+      - image: statuzpage-ui:1
+        name: statuzpage-ui
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8282
+          name: statuzpage-ui
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/statuzpage-ui/config.cfg
+          subPath: config.json
+      volumes:
+        - name: config-volume
+          configMap:
+            name: statuzpage-ui
