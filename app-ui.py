@@ -8,7 +8,7 @@ config = configparser.RawConfigParser()
 config.read('/etc/statuzpage-ui/config.cfg')
 
 app = Flask(__name__)
-app.secret_key = 'BYG>.L*((*$jj2h>#'
+app.secret_key = 'changeYourKeyHere'
 
 def duration(start,finish):
   timeStart = datetime.strptime(start, '%Y-%m-%d %H:%M:%S')
